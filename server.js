@@ -27,8 +27,6 @@ app.get('/:id', function (req, res) {
       var str = monthNames[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
       return str;
     }
-    console.log('Date.parse(id)', Date.parse(id));
-    console.log('Boolean Date.parse(id)', Boolean(Date.parse(id)));
     var naturalTime = (Date.parse(id) > 0) ? id : naturalTimeFormat(id);
     var unixTime = (+id) ? id : Date.parse(id) / 1000;
     result = {
